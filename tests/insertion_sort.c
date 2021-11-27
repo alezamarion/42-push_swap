@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 19:59:08 by azamario          #+#    #+#             */
-/*   Updated: 2021/11/25 14:27:49 by azamario         ###   ########.fr       */
+/*   Updated: 2021/11/27 11:01:03 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,15 +36,6 @@
 2		3		2
 1 swap 	1 rra	3
 */
-
-
-
-
-
-
-
-
-
 
 //insertion sort algorithm, just looking around
 

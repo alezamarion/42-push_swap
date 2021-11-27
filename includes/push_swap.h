@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+//atualizar libft: ft_lstadd_front e ft_lstadd_back
+
 typedef struct  s_node
 {
     int             data;
