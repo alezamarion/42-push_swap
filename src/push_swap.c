@@ -6,12 +6,20 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 11:02:20 by azamario          #+#    #+#             */
-/*   Updated: 2021/11/27 11:26:23 by azamario         ###   ########.fr       */
+/*   Updated: 2021/11/27 22:34:37 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
+/*
+    terminar push
+    fazer do-action
+    fazer organizar 1
+    fazer organizar 2
+    fazer organizar 3
+    fazer organizar 5
+*/
 
 t_node  *new_node(int data)
 {
@@ -23,7 +31,7 @@ t_node  *new_node(int data)
     return(node);
 }
 
-void    push(t_node **stack, t_node *new_node)
+void    populate_stack(t_node **stack, t_node *new_node)
 {
     new_node->next = *stack;
     *stack = new_node;
@@ -36,7 +44,7 @@ void    print_stack(t_node *stack)
     node = stack;
     while (node->next != NULL)
     {
-        printf("%d", node->data);
+        printf("%d\n", node->data);
         node = node->next;
     }
     printf("%d\n", node->data);
@@ -44,12 +52,12 @@ void    print_stack(t_node *stack)
 
 int main(int argc, char **argv)
 {
-    t_node *stack = NULL;
+    t_node *stack_a = NULL;
+    t_node *stack_b = NULL;
     t_node *node = NULL;
     int i;
 
     i = 0;
-
     if (argc >= 2)
     {
         while (argv[i])
@@ -57,11 +65,25 @@ int main(int argc, char **argv)
         while (argv[--i])
         {
             node = new_node(ft_atoi(argv[i]));
-            push(&stack, node);
+            populate_stack(&stack_a, node);
             if (i == 1)
                 break ;
         }
-        print_stack(stack);
+        printf("stack_a before\n");
+        print_stack(stack_a);
+        push(&stack_a, &stack_b);
+        push(&stack_a, &stack_b);
+        push(&stack_a, &stack_b);
+        push(&stack_a, &stack_b);
+        //push(&stack_a, &stack_b);
+        printf("----------\n");
+        printf("stack_a after\n");
+        print_stack(stack_a);
+        printf("----------\n");
+        printf("stack_b after\n");
+        print_stack(stack_b);
+
+
     }
     else
     {
