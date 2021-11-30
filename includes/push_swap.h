@@ -7,22 +7,22 @@
 
 //atualizar libft: ft_lstadd_front e ft_lstadd_back
 
-typedef struct  s_node
+typedef struct s_node
 {
-    int             data;
-    struct s_node   *next;
+	int data;
+	struct s_node *next;
 }t_node;
 
 typedef struct s_stack
 {
-    t_node  *head;
-    int     size;
+	t_node  *head;
+	int size;
 }t_stack;
 
 typedef struct s_stacks
 {
-    t_stack *stack_a;
-    t_stack *stack_b;
+	t_stack  stack_a;
+	t_stack  stack_b;
 }t_stacks;
 
 //stack_operations
@@ -52,18 +52,10 @@ void    do_print_rrr(t_stacks *stack);
 void    do_print_pa(t_stacks *stack);
 void    do_print_pb(t_stacks *stack);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+//sort_stack
+void    sort_stack(t_stacks *stack_a, t_stacks *stack_b);
+void    sort_two(t_stacks *stack);
+void    sort_tree(t_stacks *stack);
+void    sort_five(t_stacks *stack);
 
 #endif

@@ -6,21 +6,11 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 17:43:27 by azamario          #+#    #+#             */
-/*   Updated: 2021/11/29 22:17:22 by azamario         ###   ########.fr       */
+/*   Updated: 2021/11/30 12:43:43 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-void swap(t_node **stack)
-{
-	t_node *temp;
-
-	temp = *stack;
-	*stack = (*stack)->next;
-	temp->next = (*stack)->next;
-	(*stack)->next = temp;
-}
 
 void rotate(t_node **stack)
 {
@@ -49,13 +39,14 @@ void reverse_rotate(t_node **stack)
 	push_to_stack(stack, last);
 }
 
-void push_a(t_stack *stack_a, t_stack *stack_b)
+void swap(t_node **stack)
 {
 	t_node *temp;
 
-	temp = stack_b->head;
-	stack_b->head = stack_b->head->next;
-	push_to_stack(&stack_a->head, temp);
+	temp = *stack;
+	*stack = (*stack)->next;
+	temp->next = (*stack)->next;
+	(*stack)->next = temp;
 }
 
 void push_b(t_stack *stack_a, t_stack *stack_b)
@@ -65,4 +56,13 @@ void push_b(t_stack *stack_a, t_stack *stack_b)
 	temp = stack_a->head;
 	stack_a->head = stack_a->head->next;
 	push_to_stack(&stack_b->head, temp);
+}
+
+void push_a(t_stack *stack_a, t_stack *stack_b)
+{
+	t_node *temp;
+
+	temp = stack_b->head;
+	stack_b->head = stack_b->head->next;
+	push_to_stack(&stack_a->head, temp);
 }

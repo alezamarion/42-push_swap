@@ -5,7 +5,7 @@ INCLUDES	= includes
 HEADERS		= $(INCLUDES)/push_swap.h
 INCLUDES	:= $(addprefix -I, $(HEADERS))
 
-SRC_FILES	= push_swap.c actions.c stack_operations.c do_print_actions.c
+SRC_FILES	= push_swap.c actions.c stack_operations.c do_print_actions.c sort_stack.c
 
 SRC			= $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 
@@ -26,9 +26,11 @@ all:		$(NAME)
 bonus:		all
 
 $(NAME): $(LIBFT) $(OBJ)
+	@echo "\033[32mBuilding the executable file...\033[0m"
 	$(CC) $(OBJ) $(CFLAGS) $(LIBFLAGS) -o $@
+	@echo "\033[32mDone!\033[0m"
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(OBJ_DIR)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c includes
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 $(LIBFT):
@@ -41,8 +43,9 @@ clean:
 	make -C $(LIBFT_DIR) fclean
 
 fclean: clean
-	$(RM) $(OBJ_DIR)
+	$(RM) $(OBJ)
 	$(RM) $(NAME)
+	@echo "\033[32mExecutable and objects cleaned!\033[0m"
 
 re: fclean all
 

@@ -6,39 +6,39 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 21:54:27 by azamario          #+#    #+#             */
-/*   Updated: 2021/11/29 22:00:14 by azamario         ###   ########.fr       */
+/*   Updated: 2021/11/30 12:45:33 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-t_node  *new_node(int data)
+t_node *new_node(int data)
 {
-    t_node *node;
+	t_node *n;
 
-    node = (t_node *)malloc(sizeof(t_node));
-    node->data = data;
-    node->next = NULL;
-    return(node);
+	n = (t_node *)malloc(sizeof(t_node));
+	n->data = data;
+	n->next = NULL;
+	return (n);
 }
 
-void    push_to_stack(t_node **stack, t_node *new_node)
+void push_to_stack(t_node **stack, t_node *new_node)
 {
-    new_node->next = *stack;
-    *stack = new_node;
+	new_node->next = *stack;
+	*stack = new_node;
 }
 
-void    print_stack(t_node *stack)
+void print_stack(t_node *stack)
 {
-    t_node  *node;
+	t_node *node;
 
-    node = stack;
-    while (node->next != NULL)
-    {
-        printf("%d\n", node->data);
-        node = node->next;
-    }
-    printf("%d\n", node->data);
+	node = stack;
+	while (node->next != NULL)
+	{
+		printf("%d\n", node->data);
+		node = node->next;
+	}
+	printf("%d\n", node->data);
 }
 
 t_node *get_bottom_element(t_node *stack)
