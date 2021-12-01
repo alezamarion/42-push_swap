@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 11:02:20 by azamario          #+#    #+#             */
-/*   Updated: 2021/11/30 13:53:21 by azamario         ###   ########.fr       */
+/*   Updated: 2021/12/01 13:00:24 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,11 @@ int main(int argc, char **argv)
 			if (i == 1)
 				break ;	
 		}
-		sort_stack(&stack->stack_a, &stack->stack_b);
+		sort_stack(&stacks);
         
-        //do_print_sa(&stacks);
-		printf("---------------------------\n");
-		print_stack(stacks.stack_a.head);
-        printf("size: %d\n", stacks.stack_a.size);
+		//printf("---------------------------\n");
+		//print_stack(stacks.stack_a.head);
+        //printf("size: %d\n", stacks.stack_a.size);
 	}
 	else
 	{

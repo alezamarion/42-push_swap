@@ -53,9 +53,9 @@ void    do_print_pa(t_stacks *stack);
 void    do_print_pb(t_stacks *stack);
 
 //sort_stack
-void    sort_stack(t_stacks *stack_a, t_stacks *stack_b);
+void    sort_stack(t_stacks *stack);
 void    sort_two(t_stacks *stack);
-void    sort_tree(t_stacks *stack);
+void    sort_three(t_stacks *stack);
 void    sort_five(t_stacks *stack);
 
 #endif
