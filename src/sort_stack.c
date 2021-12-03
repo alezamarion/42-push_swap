@@ -6,16 +6,16 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/30 13:00:37 by azamario          #+#    #+#             */
-/*   Updated: 2021/12/02 22:57:19 by azamario         ###   ########.fr       */
+/*   Updated: 2021/12/03 18:06:53 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void    sort_two(t_node *node)
+void    sort_two(t_stacks *stack)
 {
-    if (node->data > node->data->next)
-        do_print_s(node);
+    if (stack->stack_a->head->data > stack->stack_a->head->next->data)
+        do_print_sa(stack);
     else
         return ;
     return ;
@@ -27,9 +27,9 @@ void    sort_three(t_stacks *stack)
     int second;
     int third;
 
-    first = stack->stack_a.head->data;
-    second = stack->stack_a.head->next->data;
-    third = stack->stack_a.head->next->next->data;
+    first = stack->stack_a->head->data;
+    second = stack->stack_a->head->next->data;
+    third = stack->stack_a->head->next->next->data;
 
 	if (first > second && second > third && first > third)
 	{
@@ -51,16 +51,23 @@ void    sort_three(t_stacks *stack)
         return ;
 }
 
-void    sort_five(t_stacks *stack)
+void    sort_five(t_stacks *stacks)
 {
-    while (stacks.stack_a.size > 3)
-        do_print_pb(stack);
-    sort_three(stacks.stack_a);
+    while (stacks->stack_a->size > 3)
+        do_print_pb(stacks);
+    sort_three(stacks);
+    do_print_pa(stacks); //mandar de volta 1 número
+    while (stacks->stack_a->head->next != NULL)
+    {
+        if (stacks->stack_a->head->data > stacks->stack_a->head->next)
+            stacks->stack_a->head = stacks->stack_a->head->next;
+    }
 
-    sort_two(stacks.stack_b);
-    write(1, "sb\n", 3);
-    do_print_pa(stack);
-    do_print_pa(stack)
+
+        // colocar ele na ordem certa na stack A 
+ 
+        // mandar de volta outro númmero
+        // colocar na ordem
 
 }
   
@@ -81,14 +88,14 @@ void    sort_five(t_stacks *stack)
 
 void    sort_stack(t_stacks *stack)
 {
-    if (stack->stack_a.size == 1)
+    if (stack->stack_a->size == 1)
         return ;
-    if (stack->stack_a.size == 2)
+    if (stack->stack_a->size == 2)
         sort_two(stack);
-    if (stack->stack_a.size == 3)
+    if (stack->stack_a->size == 3)
         sort_three(stack);
-    if (stack->stack_a.size > 3 && stack->stack_a.size < 6)
-        sort_five(stack);
+    // if (stack->stack_a.size > 3 && stack->stack_a.size < 6)
+    //     sort_five(stack);
     // if (stack->stack_a.size > 5 && stack->stack_a.size <= 100)
     //     sort_until_100(stack)
     // if (stack->stack_a.size > 100)

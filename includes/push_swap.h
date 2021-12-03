@@ -23,8 +23,8 @@ typedef struct s_stack
 
 typedef struct s_stacks
 {
-	t_stack  stack_a;
-	t_stack  stack_b;
+	t_stack  *stack_a;
+	t_stack  *stack_b;
 }t_stacks;
 
 //stack_operations
@@ -34,8 +34,6 @@ void    print_stack(t_node *stack);
 t_node  *get_bottom_element(t_node *stack);
 void    append_to_stack(t_node **stack, t_node *new);
 void    stack_size(t_stack stack);
-void    get_stack_info(&stacks.stack_a);
-
 
 //actions
 void    swap(t_node **stack);
@@ -61,6 +59,6 @@ void    do_print_pb(t_stacks *stack);
 void    sort_stack(t_stacks *stack);
 void    sort_two(t_stacks *stack);
 void    sort_three(t_stacks *stack);
-void    sort_five(t_stacks *stack);
+//void    sort_five(t_stacks *stack);
 
 #endif
