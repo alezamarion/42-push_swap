@@ -17,6 +17,8 @@ typedef struct s_stack
 {
 	t_node  *head;
 	int size;
+    int max;
+    int min;
 }t_stack;
 
 typedef struct s_stacks
@@ -31,6 +33,9 @@ void    push_to_stack(t_node **stack, t_node *new_node);
 void    print_stack(t_node *stack);
 t_node  *get_bottom_element(t_node *stack);
 void    append_to_stack(t_node **stack, t_node *new);
+void    stack_size(t_stack stack);
+void    get_stack_info(&stacks.stack_a);
+
 
 //actions
 void    swap(t_node **stack);

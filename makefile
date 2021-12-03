@@ -18,7 +18,7 @@ LIBFLAGS	= -L$(LIBFT_DIR) -lft
 
 RM			= rm -rf
 
-CC			= clang
+CC			= gcc
 CFLAGS		= -Wall -Wextra -Werror
 
 all:		$(NAME)

@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 22:03:48 by azamario          #+#    #+#             */
-/*   Updated: 2021/11/30 12:54:45 by azamario         ###   ########.fr       */
+/*   Updated: 2021/12/02 22:51:50 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ void do_print_sa(t_stacks *stack)
 {
     swap(&stack->stack_a.head);
     write(1, "sa\n", 3);
+}
+
+void do_print_s(t_node *node)
+{
+    swap(&node);
 }
 
 void do_print_sb(t_stacks *stack)
