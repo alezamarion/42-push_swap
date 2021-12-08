@@ -19,7 +19,7 @@ LIBFLAGS	= -L$(LIBFT_DIR) -lft
 RM			= rm -rf
 
 CC			= gcc
-CFLAGS		= -Wall -Wextra -Werror
+CFLAGS		= -Wall -Wextra -Werror -fsanitize=address
 
 all:		$(NAME)
 

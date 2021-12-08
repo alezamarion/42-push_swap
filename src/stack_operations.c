@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/29 21:54:27 by azamario          #+#    #+#             */
-/*   Updated: 2021/12/02 22:54:32 by azamario         ###   ########.fr       */
+/*   Created: 2021/12/06 08:58:39 by azamario          #+#    #+#             */
+/*   Updated: 2021/12/06 12:40:48 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,15 +59,4 @@ void	append_to_stack(t_node **stack, t_node *new)
 		last->next = new;
 	else
 		*stack = new;
-}
-
-void    stack_size(t_stack stack)
-{
-    stack.size = 0;
-    while (stack.head->next != NULL)
-    {
-        stack.size++;
-        stack.head = stack.head->next;
-    }
-    stack.size++;
 }
