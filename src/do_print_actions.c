@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/29 22:03:48 by azamario          #+#    #+#             */
-/*   Updated: 2021/12/06 12:49:40 by azamario         ###   ########.fr       */
+/*   Updated: 2021/12/08 17:47:26 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void do_print_ss(t_stacks *stack)
 
 void do_print_ra(t_stacks *stack)
 {
-    reverse_rotate(&stack->stack_a.head);
+    rotate(&stack->stack_a.head);
     write(1, "ra\n", 3);
 }
 
