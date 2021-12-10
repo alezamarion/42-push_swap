@@ -9,20 +9,26 @@
 
 typedef struct s_node
 {
-	int data;
+	int			index;
+	int			data;
 	struct s_node *next;
 }t_node;
 
 typedef struct s_stack
 {
-	t_node  *head;
-	int size;
+	t_node		*head;
+	int			size;
+	int			limit;
+	int			min;
+	int			max;
+
 }t_stack;
 
 typedef struct s_stacks
 {
-	t_stack  stack_a;
-	t_stack  stack_b;
+	t_stack 	stack_a;
+	t_stack 	stack_b;
+
 }t_stacks;
 
 //stack_operations
@@ -57,5 +63,17 @@ void    sort_stack(t_stacks *stack);
 void    sort_two(t_stacks *stack);
 void    sort_three(t_stacks *stack);
 void    sort_five(t_stacks *stack);
+
+//utils
+void	transform_args(int argc, char **argv, int *number);
+int		*link_index(int len, int *number);
+int		*quick_sort(int len, int *number);
+//static int	*copy_vector(int len, int *number);
+int		*get_index(int len, int *number, int *copy);
+char	**string_binary(int len, int *num);
+char	*ft_itob(int len, int num);
+int		find_limit(int len);
+
+
 
 #endif
