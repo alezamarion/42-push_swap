@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 11:02:20 by azamario          #+#    #+#             */
-/*   Updated: 2021/12/10 16:15:09 by azamario         ###   ########.fr       */
+/*   Updated: 2021/12/10 16:27:02 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@
 int main(int argc, char **argv)
 {
 	//t_stacks	stacks;
-	t_node		*node;
+	//t_node		*node;
 	int			*number;
 	char		**binary;
-	int 		i;
+	//int 		i;
 	int			*index;
 
-	node = NULL;
-	i = 0;
+	//node = NULL;
+	//i = 0;
 	if (argc == 1)
-		return (1) ;	
+		return (1);	
 	argc--;
 	argv++;
 	number = malloc(sizeof(int) * argc);

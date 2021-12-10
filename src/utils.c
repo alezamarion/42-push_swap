@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 14:41:45 by azamario          #+#    #+#             */
-/*   Updated: 2021/12/10 16:22:34 by azamario         ###   ########.fr       */
+/*   Updated: 2021/12/10 16:35:34 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	*copy_vector(int len, int *number)
 	int	*copy;
 	int	i;
 
-	copy = malloc(sizeof(int) * len + 1);
+	copy = malloc((sizeof(int) * len) + 1);
 	if (!copy)
 		exit(EXIT_FAILURE);
 	i = 0;
@@ -49,7 +49,7 @@ int	*quick_sort(int len, int *number)
 
 	copy = copy_vector(len, number);
 	i = 0;
-	while (i < len -1)
+	while (i < len - 1)
 	{
 		if (copy[i] > copy[i + 1])
 		{
@@ -119,7 +119,7 @@ char	*ft_itob(int len, int num)
 
 	limit = find_limit(len);
 	t = 0;
-	p = (char *)malloc(sizeof(char *) * limit + 1);
+	p = (char *)malloc((sizeof(char *) * limit) + 1);
 	if (p == NULL)
 		exit(EXIT_FAILURE);
 	c = limit;
@@ -142,7 +142,7 @@ char	**string_binary(int len, int *num)
 	int	i;
 	char	**string_bin;
 
-	string_bin = (char **)malloc(sizeof(char **) * len + 1);
+	string_bin = (char **)malloc((sizeof(char **) * len) + 1);
 	if (string_bin == NULL)
 		exit(EXIT_FAILURE);
 	i = 0;
