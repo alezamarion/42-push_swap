@@ -5,7 +5,8 @@ INCLUDES	= includes
 HEADERS		= $(INCLUDES)/push_swap.h
 INCLUDES	:= $(addprefix -I, $(HEADERS))
 
-SRC_FILES	= push_swap.c actions.c stack_operations.c do_print_actions.c sort_stack.c quick_sort.c utils.c
+SRC_FILES	= push_swap.c actions.c stack_operations.c do_print_actions.c \
+				sort_stack.c quick_sort.c utils.c
 
 SRC			= $(addprefix $(SRC_DIR)/, $(SRC_FILES))
 
@@ -19,7 +20,7 @@ LIBFLAGS	= -L$(LIBFT_DIR) -lft
 RM			= rm -rf
 
 CC			= gcc
-CFLAGS		= -Wall -Wextra -Werror -fsanitize=address
+CFLAGS		= -Wall -Wextra -Werror -g -fsanitize=address
 
 all:		$(NAME)
 

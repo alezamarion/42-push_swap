@@ -6,75 +6,75 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/10 14:41:45 by azamario          #+#    #+#             */
-/*   Updated: 2021/12/10 16:35:34 by azamario         ###   ########.fr       */
+/*   Updated: 2021/12/10 18:55:28 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	transform_args(int argc, char **argv, int *number)
+void	transform_args(int argc, char **argv, int *num)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < argc)
 	{
-		number[i] = ft_atoi(argv[i]);
+		num[i] = ft_atoi(argv[i]);
 		i++;
-	}	
+	}
 }
 
-static int	*copy_vector(int len, int *number)
+static int	*cpy_vector(int len, int *num)
 {
-	int	*copy;
+	int	*cpy;
 	int	i;
 
-	copy = malloc((sizeof(int) * len) + 1);
-	if (!copy)
+	cpy = malloc((sizeof(int) * len) + 1);
+	if (!cpy)
 		exit(EXIT_FAILURE);
 	i = 0;
 	while (i < len)
 	{
-		copy[i] = number[i];
+		cpy[i] = num[i];
 		i++;
 	}
-	return (copy);
+	return (cpy);
 }
 
-int	*quick_sort(int len, int *number)
+int	*quick_sort(int len, int *num)
 {
-	int	*copy;
+	int	*cpy;
 	int	aux;
 	int	i;
 
-	copy = copy_vector(len, number);
+	cpy = cpy_vector(len, num);
 	i = 0;
 	while (i < len - 1)
 	{
-		if (copy[i] > copy[i + 1])
+		if (cpy[i] > cpy[i + 1])
 		{
-			aux = copy[i];
-			copy[i] = copy[i + 1];
-			copy[i + i] = aux;
+			aux = cpy[i];
+			cpy[i] = cpy[i + 1];
+			cpy[i + 1] = aux;
 			i = -1;
 		}
 		i++;
 	}
-	return (copy);
+	return (cpy);
 }
 
-int	*get_index(int len, int *number, int *copy)
+int	*get_index(int len, int *num, int *cpy)
 {
 	int	*index;
 	int	i;
 	int	j;
 
-	index = copy_vector(len, number);
+	index = cpy_vector(len, num);
 	i = 0;
 	while (i < len)
 	{
 		j = 0;
-		while (index[i] != copy[j])
+		while (index[i] != cpy[j])
 			j++;
 		index[i] = j;
 		i++;
@@ -83,22 +83,21 @@ int	*get_index(int len, int *number, int *copy)
 }
 
 
-int	*link_index(int len, int *number)
+int	*link_index(int len, int *num) //(argc, number)
 {
-	int	*copy;
+	int	*cpy;
 	int	*index;
 
-	copy = quick_sort(len, number);
-	index = get_index(len, number, copy);
-	free(copy);
+	cpy = quick_sort(len, num);
+	index = get_index(len, num, cpy);
+	free(cpy);
 	return (index);
 }
-
 /////////////////////////////////////////////////////////////
 
 int	find_limit(int len)
 {
-	int	limit;	
+	int	limit;
 
 	limit = 0;
 	while ((len / 2) != 0)
@@ -134,12 +133,12 @@ char	*ft_itob(int len, int num)
 		c--;
 	}
 	*(p + t) = '\0';
-	return (p);	
+	return (p);
 }
 
-char	**string_binary(int len, int *num)
+char	**string_bin(int len, int *num)
 {
-	int	i;
+	int		i;
 	char	**string_bin;
 
 	string_bin = (char **)malloc((sizeof(char **) * len) + 1);
@@ -151,5 +150,5 @@ char	**string_binary(int len, int *num)
 		string_bin[i] = ft_itob(len, num[i]);
 		i++;
 	}
-	return (string_bin);	
+	return (string_bin);
 }

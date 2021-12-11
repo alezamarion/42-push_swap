@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 11:02:20 by azamario          #+#    #+#             */
-/*   Updated: 2021/12/10 16:27:02 by azamario         ###   ########.fr       */
+/*   Updated: 2021/12/10 18:57:46 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,27 +20,24 @@ int main(int argc, char **argv)
 {
 	//t_stacks	stacks;
 	//t_node		*node;
-	int			*number;
-	char		**binary;
-	//int 		i;
-	int			*index;
+	int		*num;
+	int		*index;
+	char	**bin;
 
-	//node = NULL;
-	//i = 0;
 	if (argc == 1)
-		return (1);	
+		return (1);
 	argc--;
 	argv++;
-	number = malloc(sizeof(int) * argc);
-	if (!number)
+	num = malloc(sizeof(int) * argc);
+	if (!num)
 		exit(EXIT_FAILURE);
-	//validate args(argc, argv);
-	transform_args(argc, argv, number);
-	//check_duplicates(argc, num);
-	// ir (array_is_sorted(argc, number))
-	// 	return ;
-	index = link_index(argc, number);
-	binary = string_binary(argc, index);
+	//validate_args(argc, argv);			//depois
+	transform_args(argc, argv, num);
+	//check_duplicates(argc, num);		//depois
+	// if (array_is_sorted(argc, num))		//depois
+	// 	exit(true);						//depois
+	index = link_index(argc, num);
+	bin = string_bin(argc, index);
 
 
 	// ft_bzero(&stacks, sizeof(t_stacks));
@@ -69,5 +66,5 @@ int main(int argc, char **argv)
 	// 	ft_putstr_fd("	Too few arguments provided!", 1);
 	// }
 
-	return (0);
+	//return (0);
 }
