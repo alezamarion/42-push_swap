@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 19:59:08 by azamario          #+#    #+#             */
-/*   Updated: 2021/12/01 17:27:33 by azamario         ###   ########.fr       */
+/*   Updated: 2021/12/18 16:13:12 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,9 @@ void	insertion_sort(int *array, int numb_elements)
 
 int	main(void)
 {
-	//int array[] = {7, 5, 4, 3, 2};
+	int array[] = {7, 2, 4, 1, 5, 3};
 
-	int array[] = {5, 4, 3, 2, 1};
+	//int array[] = {5, 4, 3, 2, 1};
 	// int array[] = {100 ,99 ,98 ,97 ,96 ,95 ,94 ,93 ,92 ,91 ,90 ,89 ,88 ,87 ,86 ,85 ,84 ,83 ,82 ,81 ,80 ,
 	// 				79 ,78 ,77 ,76 ,75 ,74 ,73 ,72 ,71 ,70 ,69 ,68 ,67 ,66 ,65 ,64 ,63 ,62 ,61 ,60 ,59 ,
 	// 				58 ,57 ,56 ,55 ,54 ,53 ,52 ,51 ,50 ,49 ,48 ,47 ,46 ,45 ,44 ,43 ,42 ,41 ,40 ,39 ,38 ,
@@ -77,16 +77,16 @@ int	main(void)
 	int i;
 
 	i = 0;	
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < 6; i++)
 	{
 		printf("%d ", array[i]);
 	}
 	printf("\n");
 	
-	insertion_sort(array, 5);
+	insertion_sort(array, 6);
 
 	i = 0;
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < 6; i++)
 	{
 		printf("%d ", array[i]);
 	}

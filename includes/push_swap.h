@@ -68,12 +68,10 @@ void    sort_five(t_stacks *stack);
 void	transform_args(int argc, char **argv, int *number);
 int		*link_index(int len, int *number);
 int		*quick_sort(int len, int *number);
-//static int	*copy_vector(int len, int *number);
 int		*get_index(int len, int *number, int *copy);
-char	**string_binary(int len, int *num);
+char	**string_bin(int len, int *num);
 char	*ft_itob(int len, int num);
 int		find_limit(int len);
-
 
 
 #endif
