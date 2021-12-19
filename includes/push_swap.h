@@ -7,37 +7,49 @@
 
 //atualizar libft: ft_lstadd_front e ft_lstadd_back
 
-typedef struct s_node
+typedef struct		s_node
 {
-	int			index;
-	int			data;
-	struct s_node *next;
-}t_node;
+	int				number;
+	struct s_node 	*next;
+}					t_node;
 
-typedef struct s_stack
+typedef struct	s_stack
 {
 	t_node		*head;
-	int			size;
-	int			limit;
-	int			min;
+	int			count;
 	int			max;
+	int			max1;
+	int			max2;
+	int			min;
+}				t_stack;
 
-}t_stack;
-
-typedef struct s_stacks
+typedef struct	s_stacks
 {
-	t_stack 	stack_a;
-	t_stack 	stack_b;
-
-}t_stacks;
+	t_stack 	*stack_a;
+	t_stack 	*stack_b;
+	char		**argv;
+	int			is_stacks;
+}				t_stacks;
 
 //stack_operations
+t_stack		*fill_stack(int argc, char **argv);
+t_stack		*init_empty_stack(void);
+int			add_element(t_stack	*stack, int	new_number);
+void		free_stack(t_stack	*stack);
+void		exit_push_swap(t_stacks *stacks, int number);
+void		free_arg(char **argv);
+void		error(char *exit_message);
+
+
+
+
+/*
 t_node  *new_node(int data);
 void    push_to_stack(t_node **stack, t_node *new_node);
 void    print_stack(t_node *stack);
 t_node  *get_bottom_element(t_node *stack);
 void    append_to_stack(t_node **stack, t_node *new);
-
+*/
 //actions
 void    swap(t_node **stack);
 void    rotate(t_node **stack);
