@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 08:58:39 by azamario          #+#    #+#             */
-/*   Updated: 2021/12/19 00:00:53 by azamario         ###   ########.fr       */
+/*   Updated: 2021/12/19 21:59:08 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ t_stack		*init_empty_stack(void)
 	stack->count = 0;
 	stack->min = 2147483647;	//verificar isso e linha abaixo
 	stack->max = -2147483648;
+	stack->max1 = 0;
+	stack->max2 = 0;
 	return (stack);
 }
 

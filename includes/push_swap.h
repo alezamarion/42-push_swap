@@ -31,6 +31,7 @@ typedef struct	s_stacks
 	int			is_stacks;
 }				t_stacks;
 
+
 //stack_operations
 t_stack		*fill_stack(int argc, char **argv);
 t_stack		*init_empty_stack(void);
