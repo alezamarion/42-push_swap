@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 11:02:20 by azamario          #+#    #+#             */
-/*   Updated: 2021/12/19 21:53:53 by azamario         ###   ########.fr       */
+/*   Updated: 2021/12/29 16:27:28 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,5 @@ int	main(int argc, char **argv)
 	if (!(stack_b = init_empty_stack()))
 		exit_push_swap(&stacks, 1);
 	stacks.stack_b = stack_b;
+	exit_push_swap(&stacks, 3);
 }

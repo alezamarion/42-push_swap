@@ -5,8 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-//atualizar libft: ft_lstadd_front e ft_lstadd_back
-
 typedef struct		s_node
 {
 	int				number;
@@ -31,7 +29,6 @@ typedef struct	s_stacks
 	int			is_stacks;
 }				t_stacks;
 
-
 //stack_operations
 t_stack		*fill_stack(int argc, char **argv);
 t_stack		*init_empty_stack(void);
@@ -43,7 +40,6 @@ void		error(char *exit_message);
 
 
 
-
 /*
 t_node  *new_node(int data);
 void    push_to_stack(t_node **stack, t_node *new_node);
@@ -51,6 +47,8 @@ void    print_stack(t_node *stack);
 t_node  *get_bottom_element(t_node *stack);
 void    append_to_stack(t_node **stack, t_node *new);
 */
+
+/*
 //actions
 void    swap(t_node **stack);
 void    rotate(t_node **stack);
@@ -86,5 +84,5 @@ char	**string_bin(int len, int *num);
 char	*ft_itob(int len, int num);
 int		find_limit(int len);
 
-
+*/
 #endif

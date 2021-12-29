@@ -19,7 +19,7 @@ LIBFLAGS	= -L$(LIBFT_DIR) -lft
 RM			= rm -rf
 
 CC			= gcc
-CFLAGS		= -Wall -Wextra -Werror -g -fsanitize=address -fno-omit-frame-pointer
+CFLAGS		= -Wall -Wextra -Werror  -g -fsanitize=address -fno-omit-frame-pointer
 
 all:		$(NAME)
 
