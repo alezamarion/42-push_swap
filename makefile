@@ -6,7 +6,7 @@
 #    By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/10 21:37:20 by azamario          #+#    #+#              #
-#    Updated: 2022/01/11 13:59:01 by azamario         ###   ########.fr        #
+#    Updated: 2022/01/11 15:53:07 by azamario         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,7 @@ clean:
 fclean: clean
 	$(RM) $(OBJ)
 	$(RM) $(NAME)
-	@echo "\033[31mExecutable and objects cleaned!\033[0m"
+	@echo "\033[32mExecutable and objects cleaned!\033[0m"
 
 re: fclean all
 
