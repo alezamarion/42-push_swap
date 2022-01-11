@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 11:02:20 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/11 13:49:45 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/11 14:03:11 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,12 @@ int	main(int argc, char **argv)
 	check_duplicates(argc, array_number);
 	array_is_sorted(argc, array_number);
 	index = link_index(argc, array_number);
-	binary_index = get_binary_index(argc, index);	//array char **
+	binary_index = get_binary_index(argc, index);
 	init_struct(&stacks, argc);
 	fill_stack_a(&stacks, binary_index, index);
 	push_swap(&stacks, index);
-	
+	freeing(&stacks, array_number, index, binary_index);
+	return (0);
 }
 
 void	init_struct(t_stacks *stacks, int argc)

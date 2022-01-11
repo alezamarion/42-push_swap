@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 17:12:36 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/11 13:51:26 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/11 14:11:02 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@ void		push_swap(t_stacks *stacks, int *index);
 
 //exit.c
 void    	exit_error(void);
+void    	freeing(t_stacks *stacks, int *array_number, int *index, 
+												char **binary_index);
+void    	ps_listclear(t_stack **linked_list);
 
 //check_args.c
 int 		validate_args(int argc, char **argv);
@@ -74,7 +77,7 @@ void    	short_push_swap(t_stacks *stacks, int *index);
 
 //push_swap_short2.c
 int pos_0_greater_pos_1(int pos_0, int pos_1, int pos_2, 
-                                t_stacks *stacks);
+                                	t_stacks *stacks);
 int pos_0_lower_pos_1(int pos_0, int pos_2, t_stacks *stacks);
 
 //push_swap_long.c
