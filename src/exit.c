@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 17:10:29 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/11 14:15:40 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/11 14:21:14 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,4 @@ void    ps_listclear(t_stack **linked_list)
     }
     *linked_list = NULL;
 }
+
