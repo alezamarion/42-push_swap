@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 08:31:47 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/11 13:17:34 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/11 17:43:17 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int	*get_index(int argc, int *array_number, int *array_sorted)
 		index[i] = j;
 		i++;
 	}
-	return (index);
+ 	return (index);
 }
 
 int *link_index(int argc, int *array_number)

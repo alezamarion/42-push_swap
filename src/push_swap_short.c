@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 14:16:11 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/11 13:48:44 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/11 17:39:05 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static int  sort_four_or_five(t_stacks *stacks, int *index)
     if (stacks->len == 5)
     {
         push_a(stacks);
-        push_b(stacks);
+        push_a(stacks);
     }
     return (0);
 }

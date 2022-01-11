@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 17:12:36 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/11 15:50:14 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/11 17:47:21 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ typedef struct s_stacks
 void		init_struct(t_stacks *stacks, int argc);
 void		fill_stack_a(t_stacks *stacks, char **binary_index, int *index);
 void		push_swap(t_stacks *stacks, int *index);
-
 
 //exit.c
 void    	exit_error(void);
@@ -76,12 +75,12 @@ t_stack 	*listlast(t_stack *lst);
 void    	short_push_swap(t_stacks *stacks, int *index);
 
 //push_swap_short2.c
-int pos_0_greater_pos_1(int pos_0, int pos_1, int pos_2, 
+int 		pos_0_greater_pos_1(int pos_0, int pos_1, int pos_2, 
                                 	t_stacks *stacks);
-int pos_0_lower_pos_1(int pos_0, int pos_2, t_stacks *stacks);
+int 		pos_0_lower_pos_1(int pos_0, int pos_2, t_stacks *stacks);
 
 //push_swap_long.c
-void    long_push_swap(t_stacks *stacks);
+void    	long_push_swap(t_stacks *stacks);
 
 //actions.c
 void    	reverse_rotate(t_stacks *stacks);
@@ -89,6 +88,5 @@ void    	swap(t_stacks *stacks);
 void    	rotate(t_stacks *stacks);
 void    	push_a(t_stacks *stacks);
 void    	push_b(t_stacks *stacks);
-
 
 #endif
