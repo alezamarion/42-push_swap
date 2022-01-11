@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 11:02:20 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/10 20:39:50 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/11 13:49:45 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,24 +30,12 @@ int	main(int argc, char **argv)
 	argv_to_integer(argc, argv, array_number);
 	check_duplicates(argc, array_number);
 	array_is_sorted(argc, array_number);
-
-	//checar a partir daqui:
-	index = link_index(argc, array_number);			//array de int
-	
-	// int i = 0;
-	// while (index[i] != '\0')
-	// {
-	// 	printf("index: %d", index[i]);
-	// 	i++;
-	// }
-
+	index = link_index(argc, array_number);
 	binary_index = get_binary_index(argc, index);	//array char **
 	init_struct(&stacks, argc);
 	fill_stack_a(&stacks, binary_index, index);
 	push_swap(&stacks, index);
 	
-	//fazer o freeing?
-
 }
 
 void	init_struct(t_stacks *stacks, int argc)
@@ -77,6 +65,6 @@ void	push_swap(t_stacks *stacks, int *index)
 {
 	if (stacks->len <= 5)
 		short_push_swap(stacks, index);
-	//else
-	//	long_push_swap(stacks);
+	else
+		long_push_swap(stacks);
 }

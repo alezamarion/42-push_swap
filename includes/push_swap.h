@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 17:12:36 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/10 20:39:43 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/11 13:51:26 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,20 +70,22 @@ void    	ps_listadd_back(t_stack **lst, t_stack *next);
 t_stack 	*ps_listlast(t_stack *lst);
 
 //push_swap_short.c
-void    	short_push_swap(t_stacks *stack, int *index);
+void    	short_push_swap(t_stacks *stacks, int *index);
 
 //push_swap_short2.c
 int pos_0_greater_pos_1(int pos_0, int pos_1, int pos_2, 
-                                t_stacks *stack);
-int pos_0_lower_pos_1(int pos_0, int pos_2, t_stacks *stack);
+                                t_stacks *stacks);
+int pos_0_lower_pos_1(int pos_0, int pos_2, t_stacks *stacks);
 
-
+//push_swap_long.c
+void    long_push_swap(t_stacks *stacks);
 
 //actions.c
-void    	reverse_rotate(t_stacks *stack);
-void    	swap(t_stacks *stack);
-void    	rotate(t_stacks *stack);
-void    	rotate(t_stacks *stack);
+void    	reverse_rotate(t_stacks *stacks);
+void    	swap(t_stacks *stacks);
+void    	rotate(t_stacks *stacks);
+void    	push_a(t_stacks *stacks);
+void    	push_b(t_stacks *stacks);
 
 
 #endif

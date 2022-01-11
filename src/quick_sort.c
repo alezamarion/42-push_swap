@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 08:31:47 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/10 09:16:26 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/11 13:17:34 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	*get_index(int argc, int *array_number, int *array_sorted)
 	while (i < argc)
 	{
 		j = 0;
-		while (index[i] != array_sorted[i]) 
+		while (index[i] != array_sorted[j]) 
 			j++;
 		index[i] = j;
 		i++;
