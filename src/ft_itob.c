@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 09:18:24 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/10 09:37:46 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/10 17:41:11 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,47 +25,47 @@ int find_limit(int argc)
     return (limit);
 }
 
-char    *ft_itob(int argc, int array_number)
+char    *ft_itob(int argc, int index) //array 3 2 1  //indice 2 1 0
 {
-    int     limit_count;
+   // int     limit_count;
     int     digit;
     int     i;
-    char    *pointer;
+    char    *binary_array; //
     int     limit;
 
-    limit = find_limit(argc);
+    limit = find_limit(argc);       //limit is 1
     i = 0;
-    pointer = (char *)malloc((sizeof(char *) * limit) + 1);
-    if (pointer == NULL)
+    binary_array = (char *)malloc((sizeof(char *) * limit) + 1);
+    if (binary_array == NULL)
         exit(EXIT_FAILURE);
-    limit_count = limit;
-    while (limit_count >= 0)
+   // limit_count = limit;                          primeira, índice 2                      segunda, índice 1
+    while (limit >= 0)                      // 1                                        |   1                       0
     {
-        digit = array_number >> limit_count;
-        if (digit & 1)
-            *(pointer + i) = 1 + '0';
+        digit = index >> limit;             // 2 >> 1 = 10 >> 01 = 1 | 2 >> 0 = 10      |   1 >> 1 = 01 >> 1 = 0    01 >> 0 = 01
+        if (digit & 1)                      // 1 & 1 = 1 | 10 & 01 = 0                  |   0 & 01 = 0              01 & 1 = 1
+            *(binary_array + i) = 1 + '0';  // 0 + 0 = '0'                              |                           '0' + 1 = 1 + '0' = '1'
         else
-            *(pointer + i) = 0 + '0';
-        i++;
-        limit_count--;
+            *(binary_array + i) = 0 + '0';  //             | '0'+ 1 = 1 + '0' = '10'    |   0 = '0'                 
+        i++;                                // 1                                        |                          
+        limit--;                            // 0                                        |                           
     }
-    *(pointer + i) = '\0';
-    return (pointer);
+    *(binary_array + i) = '\0';
+    return (binary_array);                  // retorna '10'                                 retorna '01'
 }
 
-char    **string_bin(int argc, int *array_number)
+char    **get_binary_index(int argc, int *index)
 {
     int     i;
-    char    **string_bin;
+    char    **binary_index;
 
-    string_bin = (char **)malloc((sizeof(char **) * argc) + 1);
-    if (string_bin == NULL)
+    binary_index = (char **)malloc((sizeof(char **) * argc) + 1);
+    if (binary_index == NULL)
         exit(EXIT_FAILURE);
     i = 0;
     while (i < argc)
     {
-        string_bin[i] = ft_itob(argc, array_number[i]);
+        binary_index[i] = ft_itob(argc, index[i]); // índice binário na posição 0 é '10'
         i++;
     }
-    return (string_bin);
+    return (binary_index);
 }
