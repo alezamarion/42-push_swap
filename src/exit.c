@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 17:10:29 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/11 14:48:42 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/11 15:49:42 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ void    freeing(t_stacks *stacks, int *array_number, int *index,
     index = NULL;
     free(array_number);
     array_number = NULL;
-    ps_listclear(&stacks->stack_a);
-    ps_listclear(&stacks->stack_b);
+    listclear(&stacks->stack_a);
+    listclear(&stacks->stack_b);
     i = 0;
     while (i < stacks->len)
     {
@@ -38,7 +38,7 @@ void    freeing(t_stacks *stacks, int *array_number, int *index,
     free (binary_index);
 }
 
-void    ps_listclear(t_stack **linked_list)
+void    listclear(t_stack **linked_list)
 {
     t_stack    *aux;
     t_stack    *temp;

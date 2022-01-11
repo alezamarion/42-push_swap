@@ -6,7 +6,7 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/27 11:02:20 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/11 14:03:11 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/11 15:50:48 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,11 @@ void	fill_stack_a(t_stacks *stacks, char **binary_index, int *index)
 	if (stacks->len)
 	{
 		i = 0;
-		stacks->stack_a = ps_listnew(binary_index[i], index[i]);
+		stacks->stack_a = listnew(binary_index[i], index[i]);
 		while (i < stacks->len -1)
 		{
 			i++;
-			ps_listadd_back(&stacks->stack_a, ps_listnew(binary_index[i], index[i]));
+			listadd_back(&stacks->stack_a, listnew(binary_index[i], index[i]));
 		}
 	}
 }

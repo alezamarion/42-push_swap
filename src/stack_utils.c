@@ -6,13 +6,13 @@
 /*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 13:44:43 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/10 20:30:00 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/11 15:50:30 by azamario         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-t_stack *ps_listnew(char *binary_index, int index)
+t_stack *listnew(char *binary_index, int index)
 {
     t_stack *node;
 
@@ -25,7 +25,7 @@ t_stack *ps_listnew(char *binary_index, int index)
     return (node);
 }
 
-t_stack *ps_listlast(t_stack *lst)
+t_stack *listlast(t_stack *lst)
 {
     if (lst == 0)
         return (0);
@@ -34,11 +34,11 @@ t_stack *ps_listlast(t_stack *lst)
     return (lst);
 }
 
-void    ps_listadd_back(t_stack **lst, t_stack *next)
+void    listadd_back(t_stack **lst, t_stack *next)
 {
     t_stack *last;
 
-    last = ps_listlast(*lst);
+    last = listlast(*lst);
     if (last != 0)
         last->next = next;
     else
