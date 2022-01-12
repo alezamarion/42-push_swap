@@ -12,25 +12,25 @@
 
 #include "../includes/push_swap.h"
 
-void    long_push_swap(t_stacks *stacks)
+void	long_push_swap(t_stacks *stacks)
 {
-    int i;
+	int	i;
 
-    stacks->limit = find_limit(stacks->len);
-    i = 0;
-    while (stacks->limit >= 0)
-    {
-        while (i < stacks->len)
-        {
-            if (stacks->stack_a->binary_index[stacks->limit] == '0')
-                push_b(stacks);
-            else
-                rotate(stacks);
-            i++;
-        }
-        while (stacks->stack_b)
-            push_a(stacks);
-        stacks->limit--;
-        i = 0;
-    }
+	stacks->limit = find_limit(stacks->len);
+	i = 0;
+	while (stacks->limit >= 0)
+	{
+		while (i < stacks->len)
+		{
+			if (stacks->stack_a->binary_index[stacks->limit] == '0')
+				push_b(stacks);
+			else
+				rotate(stacks);
+			i++;
+		}
+		while (stacks->stack_b)
+			push_a(stacks);
+		stacks->limit--;
+		i = 0;
+	}
 }

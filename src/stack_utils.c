@@ -12,35 +12,35 @@
 
 #include "../includes/push_swap.h"
 
-t_stack *listnew(char *binary_index, int index)
+t_stack	*listnew(char *binary_index, int index)
 {
-    t_stack *node;
+	t_stack	*node;
 
 	node = (t_stack *)malloc(sizeof(t_stack));
-    if (node == NULL)
-        exit(EXIT_FAILURE);
-    node->binary_index = binary_index;
-    node->index = index;
-    node->next = NULL;
-    return (node);
+	if (node == NULL)
+		exit(EXIT_FAILURE);
+	node->binary_index = binary_index;
+	node->index = index;
+	node->next = NULL;
+	return (node);
 }
 
-t_stack *listlast(t_stack *lst)
+t_stack	*listlast(t_stack *lst)
 {
-    if (lst == 0)
-        return (0);
-    while (lst->next != 0)
-        lst = lst->next;
-    return (lst);
+	if (lst == 0)
+		return (0);
+	while (lst->next != 0)
+		lst = lst->next;
+	return (lst);
 }
 
-void    listadd_back(t_stack **lst, t_stack *next)
+void	listadd_back(t_stack **lst, t_stack *next)
 {
-    t_stack *last;
+	t_stack	*last;
 
-    last = listlast(*lst);
-    if (last != 0)
-        last->next = next;
-    else
-        *lst = next;
+	last = listlast(*lst);
+	if (last != 0)
+		last->next = next;
+	else
+		*lst = next;
 }
