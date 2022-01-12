@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_args.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: azamario <azamario@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 17:16:41 by azamario          #+#    #+#             */
-/*   Updated: 2022/01/09 20:27:48 by azamario         ###   ########.fr       */
+/*   Updated: 2022/01/12 22:34:33 by coder            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int	validate_args(int argc, char **argv)
 	int	i;
 
 	i = 0;
-	if (argc == 1)
-		return (0);
 	while (i < argc)
 	{
 		if (is_integer(argv[i]) == 0)
