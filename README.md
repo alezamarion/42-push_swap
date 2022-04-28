@@ -12,9 +12,6 @@ instructions to manipulate both stacks.</br></br>
 
 ![hemsi](./push_swap.png)</br>
 
-# Printf42
-Printf function recoded, with limited specifiers and flags. Because putnbr and putstr aren’t enough!<br>
-
 ## Use:
 
 🚧 project:<br/>
