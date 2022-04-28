@@ -11,3 +11,25 @@ need to be sorted. You have at your disposal a set of int values, 2 stacks and a
 instructions to manipulate both stacks.</br></br>
 
 ![hemsi](./push_swap.png)</br>
+
+# Printf42
+Printf function recoded, with limited specifiers and flags. Because putnbr and putstr aren’t enough!<br>
+
+## Use:
+
+🚧 project:<br/>
+```
+42Libft $ make
+```
+🚿 Clean Obj files:<br/>
+```
+42Libft $ make clean
+```
+🚿 🚿 Clean All (obj files + binary):<br/>
+```
+42Libft $ make fclean
+```
+🚿 🚿 🚧 Clean All + build:<br/>
+```
+42Libft $ make re
+```
