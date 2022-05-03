@@ -22,7 +22,7 @@ instructions to manipulate both stacks.</br></br>
 Execute:
 ```
 ./push_swap 2 1 3 6 5 8
-or
+
 ARG="2 1 3 6 5 8"; ./push_swap $ARG | wc -l
 ```
 
