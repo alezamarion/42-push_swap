@@ -10,8 +10,6 @@ The Push_swap project is a very simple and highly effective algorithm project: d
 need to be sorted. You have at your disposal a set of int values, 2 stacks and a set of
 instructions to manipulate both stacks.</br></br>
 
-![hemsi](./push_swap.png)</br>
-
 ## Badge
 <img src="badge_push_swap.png">
 
@@ -22,7 +20,7 @@ instructions to manipulate both stacks.</br></br>
 - Algorithms & AI 
 
 ## My grade
-<img src="score_push_swap.png">
+<img src="score_push_swap.png"><br>
 
 
 🚧 project:<br/>
@@ -41,8 +39,7 @@ push_swap42 $ make fclean
 ```
 push_swap42 $ make re
 ```
-
-<br/>See Makefile<br/>
+See Makefile<br/><br>
 
 ### Made with: <br/>
 
