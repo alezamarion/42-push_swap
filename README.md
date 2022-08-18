@@ -12,29 +12,55 @@ instructions to manipulate both stacks.</br></br>
 
 ![hemsi](./push_swap.png)</br>
 
-## Use:
+## Badge
+<img src="push_swap.png">
+
+## Skills
+- Unix
+- Imperative programming
+- Rigor
+- Algorithms & AI 
+
+## My grade
+<img src="score_push_swap.png">
+
 
 🚧 project:<br/>
 ```
-42Libft $ make
+push_swap42 $ make
+```
+:shower: Clean Obj files:<br/>
+```
+push_swap42 $ make clean
+```
+:shower: :shower: Clean All (obj files + binary):<br/>
+```
+push_swap42 $ make fclean
+```
+:shower: :shower: 🚧 Clean All + build:<br/>
+```
+push_swap42 $ make re
 ```
 
-Execute:
-```
-./push_swap 2 1 3 6 5 8
+<br/>See Makefile<br/>
 
-ARG="2 1 3 6 5 8"; ./push_swap $ARG | wc -l
-```
+### Made with: <br/>
 
-🚿 Clean Obj files:<br/>
-```
-42Libft $ make clean
-```
-🚿 🚿 Clean All (obj files + binary):<br/>
-```
-42Libft $ make fclean
-```
-🚿 🚿 🚧 Clean All + build:<br/>
-```
-42Libft $ make re
-```
+### Alexandre Zamarion
+<div style="display: inline_block">
+ <a href="https://github.com/alezamarion" target="_blank"><img align="center" alt="Github_Jorge" height="30" width="30" src="https://cdn-icons-png.flaticon.com/128/1051/1051275.png" target="_blank"></a>
+ <a href="https://www.linkedin.com/in/alexandre-zamarion-cepeda-a3766323a/" target="_blank"><img align="center"src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+</div>
+
+### Jorge Alves
+<div style="display: inline_block">
+ <a href="https://github.com/jorgeedualves/jorgeedualves" target="_blank"><img align="center" alt="Github_Jorge" height="30" width="30" src="https://cdn-icons-png.flaticon.com/128/1051/1051275.png" target="_blank"></a>
+ <a href="https://www.linkedin.com/in/jorge-eduardo-alves-094b4331/" target="_blank"><img align="center"src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+</div>
+
+### Alfredo Neto
+<div style="display: inline_block">
+ <a href="https://github.com/Alfredo-Neto" target="_blank"><img align="center" alt="Github_Jorge" height="30" width="30" src="https://cdn-icons-png.flaticon.com/128/1051/1051275.png" target="_blank"></a>
+ <a href="https://www.linkedin.com/in/alfredo-neto-a2515814b/" target="_blank"><img align="center"src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+</div>
+
