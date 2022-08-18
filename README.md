@@ -13,7 +13,7 @@ instructions to manipulate both stacks.</br></br>
 ![hemsi](./push_swap.png)</br>
 
 ## Badge
-<img src="push_swap.png">
+<img src="badge_push_swap.png">
 
 ## Skills
 - Unix
